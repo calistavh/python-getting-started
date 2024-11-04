@@ -16,13 +16,10 @@ Including another URLconf
 """
 
 # from django.contrib import admin
-from django.urls import path
-
-import hello.views
+from django.urls import include, path
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
-    path("db/", hello.views.db, name="db"),
+    path("", include("lab7kowan.urls")),
     # Uncomment this and the entry in `INSTALLED_APPS` if you wish to use the Django admin feature:
     # https://docs.djangoproject.com/en/5.1/ref/contrib/admin/
     # path("admin/", admin.site.urls),
